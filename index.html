@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환영합니다</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 0.8s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      p {
+        color: #666;
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+
+      .button:active {
+        transform: translateY(0);
+      }
+
+      .features {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+      }
+
+      .feature-card {
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: scale(1.05);
+      }
+
+      .feature-icon {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .feature-title {
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .feature-desc {
+        color: #666;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎉 환영합니다!</h1>
+      <p>
+        이것은 당신의 첫 번째 웹 페이지입니다.<br />
+        아래 버튼을 클릭해보세요!
+      </p>
+
+      <button class="button" onclick="handleClick()">클릭해보세요</button>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">아름다운 디자인</div>
+          <div class="feature-desc">현대적이고 세련된 UI</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">빠른 속도</div>
+          <div class="feature-desc">즉각적인 반응</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">반응형</div>
+          <div class="feature-desc">모든 기기에서 완벽</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("페이지가 로드되었습니다! 🚀");
+
+      function handleClick() {
+        console.log("버튼이 클릭되었습니다! ✨");
+        alert("안녕하세요! 버튼을 클릭하셨네요! 😊");
+      }
+
+      // 페이지 로드 시간 기록
+      window.addEventListener("load", function () {
+        console.log(
+          "페이지 로딩 완료 시간:",
+          performance.now().toFixed(2),
+          "ms"
+        );
+      });
+    </script>
+  </body>
+</html>
